@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+<script>
+
+    class Books {
+        constructor({author, year, pages, currentPage}) {
+            this.author = author;
+            this.year = year;
+            this.pages = pages;
+            this.currentPage = currentPage;
+        }
+        swipe(){
+            if(this.currentPage < this.pages) this.currentPage++;
+            return this;
+        }
+    }
+    const book1 = new Books({
+        author: "Thumanyan",
+        pages: 120,
+        year: 1902,
+        currentPage: 112
+    });
+    book1.swipe().swipe().swipe().swipe().swipe().swipe().swipe();
+    console.log(book1);
+
+
+
+   /* {
+        const students = [
+            {name: "Aram", amount: "2000", gender: "male", age: 20, ranks: [2,2,5,6,3,8,9,2,2,2,9]},
+            {name: "Armine", amount: "2200", gender: "female", age: 19, ranks: [6,8,7]},
+            {name: "Lusine", amount: "3400", gender: "female", age: 27, ranks: [9,9,2,8,2,9,2,2,9,9]},
+            {name: "Narek", amount: "6700", gender: "male", age: 21, ranks: [9,9,8,9,9,9]},
+            {name: "Anna", amount: "1400", gender: "female", age: 20, ranks: [7,9,8,2,2,9,9,2,2,9]},
+            {name: "David", amount: "7700", gender: "male", age: 24, ranks: [9,9,8,9,9,9]},
+            {name: "Karen", amount: "8500", gender: "male", age: 20, ranks: [2,9,8,9,9,9]},
+        ];
+
+        function getYoungest(arr){
+            return arr.sort((a,b) => a.age - b.age).at(0);
+        }
+
+        const youngest = getYoungest(students);
+        const youngestMale = getYoungest(students.filter(st => st.gender === 'male'));
+        const firstRate9 = students.filter(st => st.ranks[0] === 9);
+        const fourTime2 = students.filter(st => {
+            let count = 0;
+            st.ranks.forEach(r => {
+                if(r === 2) count++;
+            });
+            return count === 4;
+        });
+        const fourTime2_ = students.filter(st =>
+            st.ranks
+                .filter(r => r === 2).length === 4
+        );
+        const stAvgRank = students.map(st => {
+            return [
+                st.name,
+                st.ranks.reduce((aggr, currentValue) => aggr + currentValue) / st.ranks.length
+            ];
+        });
+        const amountSum = students
+            .map(st => +st.amount)
+            .reduce((aggr, currentValue) => aggr + currentValue);
+
+        const amountSum_ = students.reduce((aggr, currentValue) => aggr + +currentValue.amount, 0)
+
+
+        console.log(amountSum);
+        console.log(amountSum_);
+    }*/
+</script>
+</body>
+</html>
